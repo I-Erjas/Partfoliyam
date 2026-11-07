@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #080b14;
+    color: #f5f5ff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 75% 20%, #30105a35, transparent 35%),
+        radial-gradient(circle at 20% 80%, #071d4930, transparent 40%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(8, 11, 20, 0.85);
+    border-bottom: 1px solid #8b5cf633;
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.name::after {
+    color: #a855f7;
+}
+
+.header {
+    display: flex;
+    gap: 35px;
+}
+
+.header a {
+    color: #b8b8d0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.header a:hover {
+    color: #c084fc;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 60px 8%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.ishim,
+.Tajribam,
+[class="bog'lanish"] {
+    background: linear-gradient(145deg, #111827, #0c1020);
+    border: 1px solid #8b5cf633;
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.35s;
+    box-shadow: 0 0 30px #00000020;
+}
+
+.ishim:hover,
+.Tajribam:hover,
+[class="bog'lanish"]:hover {
+    transform: translateY(-7px);
+    border-color: #a855f7;
+    box-shadow: 0 0 30px #8b5cf722;
+}
+
+.ishim h1,
+[class="bog'lanish"] h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #c084fc;
+}
+
+.mal p {
+    background: #1a2033;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 12px;
+    color: #e5e7eb;
+    border-left: 3px solid #a855f7;
+}
+
+/* ===== SKILLS ===== */
+.Tajribam {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.Tajribam h1 {
+    font-size: 19px;
+    background: #1a2033;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border-left: 3px solid #8b5cf6;
+    transition: 0.3s;
+}
+
+.Tajribam h1:hover {
+    background: #2a1745;
+    transform: translateX(5px);
+    color: #c084fc;
+}
+
+.men {
+    margin-bottom: 20px;
+}
+
+.men h1 {
+    font-size: 26px;
+    color: #c084fc;
+}
+
+.menBn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menBn a {
+    text-decoration: none;
+    color: #d1d5db;
+    background: #1a2033;
+    padding: 13px 16px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.menBn a:hover {
+    color: white;
+    border-color: #a855f7;
+    background: #291643;
+    transform: translateX(5px);
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #111827, #151027);
+    padding: 40px;
+    border: 1px solid #8b5cf633;
+    border-radius: 25px;
+    box-shadow: 0 0 50px #00000030;
+}
+
+.rasm {
+    flex-shrink: 0;
+}
+
+.rasm img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 35px #8b5cf644;
+    transition: 0.4s;
+}
+
+.rasm img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 50px #a855f766;
+}
+
+.malumot h1 {
+    font-size: clamp(35px, 5vw, 60px);
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fff, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.malumot h3 {
+    font-size: 24px;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+.malumot p {
+    color: #9ca3af;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777b91;
+    border-top: 1px solid #8b5cf633;
+    background: #080b14;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: 40px 5%;
+    }
+
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .rasm img {
+        width: 230px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .header {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rasm img {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .malumot h1 {
+        font-size: 36px;
+    }
+}
+
